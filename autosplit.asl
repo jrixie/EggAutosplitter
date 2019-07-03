@@ -24,6 +24,10 @@ start {
 split {
   if (old.level != current.level) {
     vars.split += 1;
-    return true;
+    if(vars.split == 25) {
+      return true;
+    } else if(vars.split >= 26) {
+      return true;
+    }
   }
 }
