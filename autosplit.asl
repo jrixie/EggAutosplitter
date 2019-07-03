@@ -1,5 +1,5 @@
 state("EggReturnsHome") {
-  int level : 0x11E2B40, 0x1C;
+  int level : 0x146AEF0, 0x1A8, 0x0, 0x18, 0x1D0, 0x1C;
 }
 
 init {
@@ -24,10 +24,6 @@ start {
 split {
   if (old.level != current.level) {
     vars.split += 1;
-    if(vars.split == 25) {
-      return true;
-    } else if(vars.split >= 26) {
-      return true;
-    }
+    return true;
   }
 }
